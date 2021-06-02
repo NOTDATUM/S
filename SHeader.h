@@ -36,7 +36,7 @@ struct SymTbl {
 	SymKind myKind = Autokind;
 	int adrs;
 	int valueint = 0; string valuestring = "";
-	int isList = 0;
+	int isList = 0; int listsize = 0;
 	void clear() {
 		name=""; myKind = Intkind;
 	}
@@ -92,6 +92,9 @@ int Search(string x) {
 	for(int i = 0; i<tbl.size(); i++) {
 		if(tbl[i].name==x) {
 			return i;
+		}
+		if(tbl[i].isList) {
+			i += tbl[i].listsize-1;
 		}
 	}
 	throw 1;
@@ -462,7 +465,7 @@ int Execute(int lastin) {
 					SymTbl tb;
 					tb.name = buffer[index+1].txt;
 					tb.myKind = Autokind;
-					tb.adrs = tbl.size(); tb.isList = 1;
+					tb.adrs = tbl.size(); tb.isList = 1; tb.listsize = s;
 					tbl.push_back(tb);
 				}
 				if(buffer[index+2].tk!=Semi) throw(4);
