@@ -1,15 +1,24 @@
-list[1000] a; int i = 0; int n = sin.int;
+list[1000] a; 
+int i = 0; 
+int n = sin.int;
+
 for(i,0,n) {
-a[i] = sin.int;
+	a[i] = sin.int;
 }
-int j = 0; int t = 0;
+
+int j = 0; 
+int t = 0;
+
 for(i,0,n) {
-for(j,i+1,n) {
-if(a[i]>a[j]) {
-t = a[i]; a[i] = a[j]; a[j] = t;
+	for(j,i+1,n) {
+		if(a[i]>a[j]) {
+			t = a[i]; 
+			a[i] = a[j]; 
+			a[j] = t;
+		}
+	}
 }
-}
-}
+
 for(i,0,n) {
-sout(a[i]); sout(" ");
+	sout(a[i]); sout(" ");
 }

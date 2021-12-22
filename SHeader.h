@@ -412,12 +412,12 @@ int changeToBuffer() {
 		}
 	}
 	if(endfind.size()!=0 || parenendfind.size()!=0) throw(0);
-	for(int i = 0; i<1000; i++) {
-		if(buffer[i].txt=="") break;
-		cout<<i<<" "<<buffer[i].tk<<" "<<buffer[i].intVal<<" "<<buffer[i].txt;
-		if(buffer[i].endnum!=0) cout<<" "<<buffer[i].endnum;
-		cout<<"\n";
-	}
+//	for(int i = 0; i<1000; i++) {
+//		if(buffer[i].txt=="") break;
+//		cout<<i<<" "<<buffer[i].tk<<" "<<buffer[i].intVal<<" "<<buffer[i].txt;
+//		if(buffer[i].endnum!=0) cout<<" "<<buffer[i].endnum;
+//		cout<<"\n";
+//	}
 }
 struct loopnum {
 	int renum = 0;
